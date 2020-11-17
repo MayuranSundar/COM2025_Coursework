@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @phone.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @phone.model %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @phone.size %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @phone.colour %>
+</p>
+
+<p>
+  <strong>Specifications:</strong>
+  <%= @phone.specifications %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @phone.image_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @phone.price %>
+</p>
+
+<%= link_to 'Edit', edit_phone_path(@phone) %> |
+<%= link_to 'Back', phones_path %>

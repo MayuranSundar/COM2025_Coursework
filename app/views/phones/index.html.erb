@@ -1,0 +1,53 @@
+<% if notice %>
+  <aside id= "notice" > <%= notice %> </aside>
+<% end %>
+
+<h1>Phones</h1>
+
+<table>
+  <%# <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Size</th>
+      <th>Colour</th>
+      <th>specificationss</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead> %>
+  <%# BOOK COPIED STUFF %>
+  <tfoot>
+    <tr>
+      <td colspan= "3" >
+        <%= link_to 'New phone' , new_phone_path %>
+      </td>
+    </tr>
+  </tfoot>
+
+<tbody>
+  <% @phones.each do |phone| %>
+      
+    <td class= "image" >
+      <%= image_tag(phone.image_url, class: 'list_image' ) %>
+    </td>
+    
+    <td class= "specifications" >
+      <h1> <%= phone.brand %> <%= phone.model %> </h1>
+      <p> <%= truncate(strip_tags(phone.specifications), length: 80) %> </p>
+    </td>
+    
+    <td class= "actions" >
+      <ul>
+        <li> <%= link_to 'Show' , phone %> </li>
+        <li> <%= link_to 'Edit' , edit_phone_path(phone) %> </li>
+        <li> <%= link_to 'Destroy' , phone, method: :delete , data: { confirm: 'Are you sure?' } %>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+

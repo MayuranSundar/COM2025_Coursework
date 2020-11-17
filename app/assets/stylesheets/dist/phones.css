@@ -1,0 +1,42 @@
+.phones {
+  margin: 0;
+  padding: 0.5em;
+}
+.phones a {
+  padding: 0.354em 0.5em;
+  border-radius: 0.354em;
+}
+.phones table {
+  border-collapse: collapse;
+}
+.phones td {
+  padding: 0.5em;
+  margin: 0;
+}
+.phones tr.list_line_odd {
+  background-color: #effeef;
+}
+.phones td.image {
+  display: none;
+}
+@media (min-width: 30em) {
+  .phones td.image {
+    display: block;
+  }
+  .phones td.image img {
+    height: 11.3em;
+  }
+}
+.phones td.specification h1 {
+  font-size: 1.4em;
+}
+.phones td.actions ul {
+  padding: 0;
+  list-style: none;
+}
+.phones td.actions ul li {
+  padding: 0.5em 0.5em;
+}
+.phones tfoot td {
+  padding: 0.5em 0;
+}
