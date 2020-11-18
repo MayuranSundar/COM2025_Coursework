@@ -8,8 +8,6 @@ class CreatePhones < ActiveRecord::Migration[5.2]
       t.text :specifications
       t.string :image_url
       t.decimal :price, precision: 8, scale: 2
-
-      t.timestamps
     end
   end
 end
