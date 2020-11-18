@@ -1,0 +1,23 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<h1>Available Phones</h1>
+<ul class="catalog">
+  <% cache @phones do %>
+    <% @phones.each do |phone| %>
+      <% cache phone do %>
+        <li>
+          <%= image_tag(phone.image_url) %>
+          <h2><%= phone.brand %> <%= phone.model %></h2>
+          <p>
+            <%= sanitize(phone.specifications) %>
+          </p>
+          <div class="price">
+            <%= number_to_currency(phone.price, :unit =>"£") %>
+          </div>
+        </li>
+      <% end %> 
+    <% end %>
+  <% end %>
+</ul>

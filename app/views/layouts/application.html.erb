@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProPhones</title>
+    <title>Pro Phones</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,10 +10,26 @@
   </head>
 
   <body>
+    <header class="main">
+      <%# <%= image_tag 'logo.jpg', alt: 'ProPhones' %>
+      <h1><%= @page_title %></h1>
+    </header>
+    
+    <section class="content">
+    <nav class="side_nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/questions">Products</a></li>
+        <li><a href="/news">Contact</a></li>
+        <li><a href="/contact">Cart</a></li>
+        <li><a href="/contact">Sign In</a></li>
+      </ul>
+    </nav>
   
-    <main class= '<%= controller.controller_name %>' >
+    <main class='<%= controller.controller_name %>'>
       <%= yield %>
     </main>
 
+    </section>
   </body>
 </html>
