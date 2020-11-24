@@ -57,4 +57,13 @@ class PhonesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to phones_url
   end
+
+  test "can not delete phone that is in a cart" do
+    assert_difference('Phone.count', 0) do
+      delete phone_url(phones(:two))
+    end
+
+    assert_redirected_to phones_url
+  end
+
 end

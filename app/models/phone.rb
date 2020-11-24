@@ -1,4 +1,9 @@
 class Phone < ApplicationRecord
+    # COPIED FROM BOOK
+    has_many :line_items
+    before_destroy :ensure_not_referenced_by_any_line_item
+    # END
+
     validates :brand, :model, :size, :colour, :specifications, :price, :image_url, presence: true
     validates :brand, length: { maximum: 15, too_long: "Maximum allowed characters is %{count}" }
     validates :model, length: { maximum: 250, too_long: "Maximum allowed characters is %{count}" }
@@ -8,4 +13,15 @@ class Phone < ApplicationRecord
 
     BRAND = %w{ Apple Samsung Google OnePlus Sony Huawei Honor Nokia BlackBerry Doro LG Motorola Oppo Xiaomi Other}
     SIZE = %w{ 32GB 64GB 128GB 256GB 512GB 1TB }
+    
+    # COPIED FROM BOOK
+    private
+    # ensure that there are no line items referencing this product
+    def ensure_not_referenced_by_any_line_item
+      unless line_items.empty?
+        errors.add(:base, 'Line Items present')
+        throw :abort
+      end
+    end
+    # END
 end

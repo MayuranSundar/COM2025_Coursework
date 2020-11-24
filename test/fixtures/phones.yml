@@ -18,7 +18,7 @@ two:
   image_url: iphone12pro.jpg
   price: 9.99
 
-12pro:
+iphone:
   brand: Apple
   model: iPhone 12 Pro
   size: 128GB
