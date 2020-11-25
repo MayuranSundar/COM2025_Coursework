@@ -17,6 +17,13 @@
     
     <section class="content">
     <nav class="side_nav">
+    <%# Renders the cart on the side when it's not empty %>
+      <% if @cart %>
+        <div id="cart" class="carts">
+          <%= render_if @cart && @cart.line_items.any?, @cart %>
+        </div>
+      <% end %>
+
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/questions">Products</a></li>

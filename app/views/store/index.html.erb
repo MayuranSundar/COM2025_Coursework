@@ -15,7 +15,7 @@
           </p>
           <div class="price">
             <%= number_to_currency(phone.price, :unit =>"£") %>
-            <%= button_to 'Add to Cart', line_items_path(phone_id: phone) %>
+            <%= button_to 'Add to Cart', line_items_path(phone_id: phone), remote: true %>
           </div>
         </li>
       <% end %> 

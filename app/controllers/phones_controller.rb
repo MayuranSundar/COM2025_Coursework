@@ -45,6 +45,9 @@ class PhonesController < ApplicationController
       if @phone.update(phone_params)
         format.html { redirect_to @phone, notice: 'Phone was successfully updated.' }
         format.json { render :show, status: :ok, location: @phone }
+        @phones = Phone.all
+        ActionCable.server.broadcast 'phones',
+          html: render_to_string('store/index', layout: false)
       else
         format.html { render :edit }
         format.json { render json: @phone.errors, status: :unprocessable_entity }
@@ -62,6 +65,15 @@ class PhonesController < ApplicationController
     end
   end
 
+  def who_bought
+    @product = Product.find(params[:id])
+    @latest_order = @product.orders.order(:updated_at).last
+    if stale?(@latest_order)
+      respond_to do |format|
+        format.atom
+      end
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_phone
@@ -72,4 +84,6 @@ class PhonesController < ApplicationController
     def phone_params
       params.require(:phone).permit(:brand, :model, :size, :colour, :specifications, :image_url, :price)
     end
+
+  
 end
