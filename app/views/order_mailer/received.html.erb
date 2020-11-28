@@ -1,0 +1,16 @@
+<h2>ProPhones order confirmation email</h2>
+<p>
+  <b> Hello <%= @order.name %>, </b>
+  <blockquote> <br>Thanks for your order. We are preparing the following item(s) for dispatch: </blockquote>
+</p>
+
+<table>
+  <tr><th colspan="2">Quantity</th><th>Phone</th></tr>
+<%= render @order.line_items -%>
+
+<p>
+  <blockquote><br>  We will let you know once your item(s) been dispatched.
+              <br>  Your estimated delivery date is <%= Date.today + 1.week %>. </blockquote>
+</p>
+
+</table>

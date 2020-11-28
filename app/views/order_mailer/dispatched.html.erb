@@ -1,0 +1,15 @@
+<h2>ProPhones order has been dispatched<h2>
+<p>
+  <b> Hello <%= @order.name %>, </b>
+  <blockquote><br>We thought you would like to know that your item(s) have been dispatched. Your order is on it's way so it can no longer be changed.</blockquote> 
+</p>
+
+<table>
+  <tr><th colspan="2">Quantity</th><th>Phone</th></tr>
+<%= render @order.line_items -%>
+
+<p>
+  <blockquote><br>Your estimated delivery date is <%= Date.today + 1.week %>.</blockquote> 
+</p>
+
+</table>
