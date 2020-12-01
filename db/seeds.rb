@@ -25,3 +25,8 @@ Phone.create!(
     specifications: 'iOS 14',
     image_url: 'iphone12promax.jpg',
     price: 1249.00) 
+
+User.create(
+    name: 'admin',
+    password: 'mypass'
+)
