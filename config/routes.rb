@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   
-  get 'admin' => 'admin#index'
+  get 'admin', to: 'admin#index'
+
+  get 'contact', to: 'home#contact'
+  post 'request_contact', to: 'home#request_contact'
+  
+  # CHANGE IT TO ROOT
+  get 'home', to: 'home#index'
 
   controller :sessions do
     get  'login' => :new
@@ -13,6 +19,7 @@ Rails.application.routes.draw do
   resources :line_items
   resources :carts
   root 'store#index', as: 'store_index'
+  # root 'home#index'
   resources :phones do
     get :who_bought, on: :member
   end
