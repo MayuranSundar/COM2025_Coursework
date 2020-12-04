@@ -19,7 +19,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
    
     assert_select 'title', 'Pro Phones'
     assert_select 'h1', 'Talk To Our Team'
-    assert_select 'p', 'Complete the following form to get in touch with us.'
+    assert_select 'p', "You are not going to hit a ridiculously long phone menu when you call us. Your email isn't going to the spam folder, never to be seen or heard from again. At Pro Phones, we provide exceptional customer service we'd want to experience ourselves. We will get back to you as soon as possible with the best solution for your query."
   end
 
   test "should post request contact but no email" do

@@ -14,7 +14,7 @@ class HomeController < ApplicationController
         message = params[:message]
       
         if email.blank?
-            flash[:notice] = t('home.request_contact.no_email')
+            flash[:alert] = t('home.request_contact.no_email')
         else
             ContactMailer.contact_email(email, name, phone, message).deliver_now
             flash[:notice] = t('home.request_contact.email_sent')
