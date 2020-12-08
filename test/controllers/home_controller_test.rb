@@ -15,7 +15,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
    
     assert_template layout: 'application'
    
-    assert_select 'title', 'Pro Phones'
+    assert_select 'title', 'Contact - Pro Phones'
     assert_select 'h1', 'Talk To Our Team'
     assert_match 'p', "You are not going to hit a ridiculously long phone menu when you call us."
   end

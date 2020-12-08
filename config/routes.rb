@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   
   root 'home#index'
 
-  get 'store/index', as: 'store_index'
+  # get 'store/index', as: 'store_index'
+  get 'store', to: 'store#index', as: 'store_index' 
   get 'admin', to: 'admin#index'
   get 'contact', to: 'home#contact'
   

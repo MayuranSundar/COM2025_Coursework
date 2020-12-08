@@ -1,5 +1,6 @@
-<h1>Welcome</h1>
-<p>
-    It's <%= Time.now %>.
-    We have <%= pluralize(@total_orders, "order") %>.
-</p>
+<% content_for(:html_title) { 'Admin - Pro Phones' } %>
+
+<h1>Welcome Back Admin</h1>
+<h3>
+    Total number of orders as of  <%= Time.now.to_formatted_s(:long_ordinal) %> is <%= @total_orders %>.
+</h3>

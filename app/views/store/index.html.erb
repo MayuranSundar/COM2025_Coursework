@@ -1,8 +1,10 @@
+<% content_for(:html_title) { 'Store - Pro Phones' } %>
+
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h1>Available Phones</h1>
+<h1>Our Phone Range</h1>
 <ul class="catalog">
   <% cache @phones do %>
     <% @phones.each do |phone| %>

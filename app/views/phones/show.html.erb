@@ -1,27 +1,27 @@
-<p id="notice"><%= notice %></p>
-
+<% content_for(:html_title) { 'Phone Info - Pro Phones' } %>
+<%# <p id="notice"><%= notice %></p>
 <p>
-  <strong>Brand:</strong>
+  <strong>Phone Brand:</strong>
   <%= @phone.brand %>
 </p>
 
 <p>
-  <strong>Model:</strong>
+  <strong>Phone Model:</strong>
   <%= @phone.model %>
 </p>
 
 <p>
-  <strong>Size:</strong>
+  <strong>Phone Size:</strong>
   <%= @phone.size %>
 </p>
 
 <p>
-  <strong>Colour:</strong>
+  <strong>Phone Colour:</strong>
   <%= @phone.colour %>
 </p>
 
 <p>
-  <strong>Specifications:</strong>
+  <strong>Phone Specifications:</strong>
   <%= @phone.specifications %>
 </p>
 
@@ -31,7 +31,7 @@
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Phone Price:</strong>
   <%= @phone.price %>
 </p>
 

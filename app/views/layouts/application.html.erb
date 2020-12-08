@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pro Phones</title>
+    <title><%= content_for?(:html_title) ? yield(:html_title) : "Pro Phones" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -33,18 +33,17 @@
 
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/questions">Products</a></li>
-        <li><a href="/news">Contact</a></li>
-        <li><a href="/contact">Cart</a></li>
-        <li><a href="/contact">Sign In</a></li>
+        <li><a href="/store">Products</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/admin">Sign In</a></li>
       </ul>
       <% if session[:user_id] %>
-          <nav class="logged_in_nav">
+          <nav class="signed_in_nav">
             <ul>
-              <li><%= link_to 'Orders',   orders_path   %></li>
+              <li><%= link_to 'Orders', orders_path %></li>
               <li><%= link_to 'Phones', phones_path %></li>
-              <li><%= link_to 'Users',    users_path    %></li>
-              <li><%= button_to 'Logout', logout_path, method: :delete   %></li>
+              <li><%= link_to 'Users',  users_path %></li>
+              <li><%= button_to 'Logout', logout_path, method: :delete %></li>
             </ul>
           </nav>
       <% end %> 

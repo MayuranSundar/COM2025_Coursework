@@ -17,10 +17,8 @@ atom_feed do |feed|
             end
             order.line_items.each do |item|
               xhtml.tr do
-                # xhtml.td item.phone.brand
                 xhtml.td item.phone.brand item.phone.model
                 xhtml.td item.quantity
-                # xhtml.td number_to_currency item.total_price
                 xhtml.td number_to_currency (item.total_price, :unit =>"£")
               end
             end
