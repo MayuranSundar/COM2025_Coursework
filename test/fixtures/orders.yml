@@ -3,7 +3,7 @@
 one:
   name: Mayuran Sundar
   address: MyAddress
-  email: myemail@test.com
+  email: test@test.com
   pay_type: Credit Card
 
 two:

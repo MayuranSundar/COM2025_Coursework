@@ -8,7 +8,7 @@ class Phone < ApplicationRecord
     validates :model, length: { maximum: 250, too_long: "Maximum allowed characters is %{count}" }
     validates :colour, length: { maximum: 50, too_long: "Maximum allowed characters is %{count}" }
     validates :price, numericality: { greater_than_or_equal_to: 0.01 }, length: { maximum: 9}
-    validates :image_url , allow_blank: true , format: { with: %r{\.(gif|jpg|png)\Z}i , message: 'must be an image URL for PNG, GIF, or JPG image.'}
+    validates :image_url , allow_blank: true , format: { with: %r{\.(gif|jpg|png)\Z}i , message: 'must be an image URL for JPG, PNG, or GIF image.'}
     
     private
     def ensure_not_referenced_by_any_line_item

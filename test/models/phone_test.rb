@@ -34,8 +34,6 @@ class PhoneTest < ActiveSupport::TestCase
     assert phone.valid?
   end
 
-  # Test to check what file types are valid
-  # Method to create a new phone object for testing
   def new_phone(image_url)
     phone = Phone.new(brand: "Apple", 
                        model: "iPhone", 
@@ -46,18 +44,18 @@ class PhoneTest < ActiveSupport::TestCase
                        price: 1)
   end
 
-  test "image url" do
-    ok = %w{ fred.gif fred.jpg fred.png FRED.JPG FRED.Jpg http://a.b.c/x/y/z/fred.gif }
-    bad = %w{ fred.doc fred.gif/more fred.gif.more }
+  test "image url validation" do
+    ok = %w{ img.png img.gif img.jpg IMG.Jpg IMG.JPG }
+    bad = %w{ img.doc img.gif/more img.gif.more }
     
     ok.each do |image_url|
     assert new_phone(image_url).valid?,
-    "#{ image_url } shouldn't be invalid"
+    "#{ image_url } should not be invalid"
     end
 
     bad.each do |image_url|
     assert new_phone(image_url).invalid?,
-    "#{ image_url } shouldn't be valid"
+    "#{ image_url } should not be valid"
     end
 
   end
