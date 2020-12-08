@@ -207,4 +207,41 @@ header.main {
             color: white;
         }
     }
+
+    .index_table {
+        table {
+            border-collapse: collapse;
+            width:70%; 
+            margin-left:15%; 
+            margin-right:15%;
+        }
+        
+        th, td {
+            padding: 8px;
+            padding-left: 50px;
+            text-align: left;
+            border-bottom: 1px solid #a4a4a4 ;
+            background-color: #323232;
+            color:#d5d5d5; 
+        }
+        a{ 
+            color: #a5a5a5;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #ffffff;
+            background-color: #323232;
+        }
+        
+    }
+    .txt_btn {
+        a{
+            color: #a5a5a5;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #ffffff;
+            background-color: black;
+        }
+    }
 }

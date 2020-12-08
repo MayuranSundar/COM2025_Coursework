@@ -9,7 +9,7 @@
   <tfoot>
     <tr>
       <td colspan= "3" >
-        <%= link_to 'New phone' , new_phone_path %>
+        <p class = 'txt_btn'> <%= link_to 'New phone' , new_phone_path %> </p>
       </td>
     </tr>
   </tfoot>
@@ -28,9 +28,9 @@
     
     <td class= "actions" >
       <ul>
-        <li> <%= link_to 'Show' , phone %> </li>
-        <li> <%= link_to 'Edit' , edit_phone_path(phone) %> </li>
-        <li> <%= link_to 'Destroy' , phone, method: :delete , data: { confirm: 'Are you sure?' } %>
+        <li class = 'txt_btn'> <%= link_to 'Show' , phone %> </li>
+        <li class = 'txt_btn'> <%= link_to 'Edit' , edit_phone_path(phone) %> </li>
+        <li class = 'txt_btn'> <%= link_to 'Destroy' , phone, method: :delete , data: { confirm: 'Are you sure?' } %>
         </li>
       </ul>
     </td>

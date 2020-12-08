@@ -1,9 +1,9 @@
 <% content_for(:html_title) { 'Users - Pro Phones' } %>
-<p id="notice"><%= notice %></p>
+<%# <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
 
-<table>
+<table class = 'index_table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<p class = 'txt_btn'> <%= link_to 'New User', new_user_path %> </p>

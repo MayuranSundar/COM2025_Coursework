@@ -8,6 +8,8 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get orders_url
     assert_response :success
+    assert_select 'title', 'Orders - Pro Phones'
+    assert_select 'h1', 'Orders'
   end
 
   test "should get new" do
