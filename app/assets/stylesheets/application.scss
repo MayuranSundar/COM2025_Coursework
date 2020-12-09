@@ -244,4 +244,35 @@ header.main {
             background-color: black;
         }
     }
+
+    .default_btn{
+        background-color: #0077ed;
+        border: none;
+        color: white;
+        padding: 4px 11px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: 400;
+        letter-spacing: -.01em;
+        border-radius: 12px;
+        line-height: 1.33337;
+    }
+
+    
+}
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    // background-color: black;
+    text-align: center;
+    border-top: 0.5px solid #a4a4a4 ;
+    margin-right: 12.5%;
+    margin-left: 12.5%;
+    
 }

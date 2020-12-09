@@ -14,13 +14,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <%= favicon_link_tag asset_path('logo.png') %>
   </head>
 
   <body>
-    <header class="main">
-      <%# <%= image_tag 'logo.jpg', alt: 'ProPhones' %>
-      <h1><%= @page_title %></h1>
-    </header>
+    <%= render "layouts/header" %>
     
     <section class="content">
     <nav class="side_nav">
@@ -58,5 +56,7 @@
     </main>
 
     </section>
+
+    <%= render "layouts/footer" %>
   </body>
 </html>
