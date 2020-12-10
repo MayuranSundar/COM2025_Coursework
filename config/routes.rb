@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post 'request_contact', to: 'home#request_contact'
 
   resources :users
-  resources :orders
+  resources :orders, except: [:edit]
   resources :line_items
   resources :carts
   resources :phones do

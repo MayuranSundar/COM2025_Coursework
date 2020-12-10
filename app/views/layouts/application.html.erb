@@ -38,10 +38,6 @@
     </nav>
     
     <section class="content">
-      <%# Flash Meessage for contact page  %>
-      <% flash.each do |key, value| %>
-        <%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
-      <% end %>
 
     <main class='<%= controller.controller_name %>'>
       <%= yield %>

@@ -22,7 +22,6 @@
         <td><%= order.email %></td>
         <td><%= order.pay_type %></td>
         <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -31,4 +30,4 @@
 
 <br>
 
-<p class = 'txt_btn'> <%= link_to 'New Order', new_order_path %> </p>
+<%= link_to 'New Order', new_order_path, {:class => "default_btn"} %>

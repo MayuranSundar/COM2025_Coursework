@@ -39,7 +39,6 @@ header.main {
     color: white;
     height: auto !important;
     min-height: 100%;
-    // height: 1000px;  
     margin: 0;
     padding: 0;
     display: flex;
@@ -54,21 +53,21 @@ header.main {
     
     main {
         padding: 0.5em;
-        margin: 50px 15%;
+        margin: 0 15%;
         width: 70%;
     }
     // COPIED FROM BOOK
     // CSS FOR ADDED TO CART SIGN
     .notice,
     #notice {
-        background: #ffb;
-        border-radius: 0.5em;
-        border: solid 0.177em #882;
-        color: #882;
+        background: white;
+        border-radius: 12px;
+        border: solid 2px white;
         font-weight: bold;
-        margin-bottom: 1em;
-        padding: 1em 1.414em;
+        padding: 5px;
         text-align: center;
+        height: auto;
+        color: black;
     }
     
      // COPIED FROM BOOK
@@ -97,35 +96,37 @@ header.main {
             margin-bottom: 0.5em;
             padding: 0;
         }
-        .field, .actions {
+        .field {
             margin-bottom: 0.5em;
             padding: 0;
         }
-        .actions {
-            text-align: right;
-            padding: 1em 0;
-        }
+        
         input, textarea, select, option {
-            border: solid thin #888;
-            box-sizing: border-box;
-            font-size: 1em;
+            font-size: 12px;
             padding: 0.5em;
-            width: 100%;
+            margin-bottom: 15px;
+            display: block;
+            width: 50%;
+            color: #333333;
         }
-        label {
-            padding: 0.5em 0;
-        }
+
         input[type="submit"] {
-            background-color: #bfb;
-            border-radius: 0.354em;
-            border: solid thin #888;
-            color: black;
-            font-size: 1.41em;
-            font-weight: bold;
-            padding: 0.354em 1em;
+            background-color: #0071e3;
+            border: none;
+            color: white;
+            padding: 4px 11px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: 400;
+            letter-spacing: -.01em;
+            border-radius: 12px;
+            line-height: 1.33337;
+            width: auto;      
         }
         input[type="submit"]:hover {
-            background-color: #9d9;
+            background-color: #0077ed;
         }
         // Also, clean up the error styling
         #error_explanation {
@@ -201,7 +202,8 @@ header.main {
             padding-left: 50px;
             text-align: left;
             border-bottom: 1px solid #a4a4a4 ;
-            background-color: #323232;
+            // background-color: #323232;
+            background-color: transparent   ;
             color:#d5d5d5; 
         }
         a{ 
@@ -210,7 +212,7 @@ header.main {
         }
         a:hover{
             color: #ffffff;
-            background-color: #323232;
+            background-color: transparent;
         }
         
     }
@@ -226,7 +228,7 @@ header.main {
     }
 
     .default_btn{
-        background-color: black;
+        background-color: transparent;
         border: none;
         color: white;
         padding: 4px 11px;
@@ -247,6 +249,10 @@ header.main {
     .default_btn:visited{
         background-color: none;
     }
+    .sed_btn{
+        width: 65px;
+        margin-left: 30px;
+    }
     .admin_btn{
         margin-left: 30px;
         margin-top: 15px;
@@ -257,7 +263,11 @@ header.main {
             color: #d6d6d6;
         }
     }
-
+    
+    h1{
+        
+        border-bottom: solid 3.5px white; 
+    }
     
 }
 .footer {

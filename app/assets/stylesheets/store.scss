@@ -4,7 +4,6 @@
 .store {
     max-width: 80em;
     ul.catalog {
-        border-top: solid 0.250em;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -29,21 +28,26 @@
             .price {
                 font-size: 1.414em;
             }
-            // COPIED FROM BOOK
             form,
             div {
                 display: inline;
             }
             input[type="submit"] {
-                background-color: #282;
-                border-radius: 0.354em;
-                border: solid thin #141;
+                background-color: #0071e3;
+                border: none;
                 color: white;
-                font-size: 1em;
-                padding: 0.354em 1em;
+                padding: 4px 11px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 12px;
+                cursor: pointer;
+                font-weight: 400;
+                letter-spacing: -.01em;
+                border-radius: 12px;
+                line-height: 1.33337;      
             }
             input[type="submit"]:hover {
-                background-color: #141;
+                background-color: #0077ed;
             }
         }
     }

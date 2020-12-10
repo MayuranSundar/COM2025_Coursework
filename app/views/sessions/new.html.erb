@@ -5,19 +5,17 @@
   <% end %>
 
   <%= form_tag do %>
-    <h2>Please Log In</h2>
+    <h1>Please Log In</h1>
     <div class="field">
       <%= label_tag :name, 'Name:' %>
-      <%= text_field_tag :name, params[:name] %>
+      <%= text_field_tag :name, params[:name], placeholder: 'Username' %>
     </div>
 
     <div class="field">
       <%= label_tag :password, 'Password:' %>
-      <%= password_field_tag :password, params[:password] %>
+      <%= password_field_tag :password, params[:password], placeholder: 'Password' %>
     </div>
 
-    <div class="actions">
-      <%= submit_tag "Login" %>
-    </div>
+    <%= submit_tag "Login" %>
   <% end %>
 </section>
