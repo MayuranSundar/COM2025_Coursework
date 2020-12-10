@@ -21,13 +21,6 @@
     <%= render "layouts/header" %>
     <nav class="top_nav">
 
-        <%# Renders the cart on the side when it's not empty %>
-        <% if @cart %>
-          <div id="cart" class="carts">
-            <%= render_if @cart && @cart.line_items.any?, @cart %>
-          </div>
-        <% end %>
-
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/store">Phones</a></li>
@@ -36,14 +29,26 @@
         </ul>
 
     </nav>
+
     
+
     <section class="content">
+      
 
     <main class='<%= controller.controller_name %>'>
       <%= yield %>
     </main>
+    
+     <%# Renders the cart on the side when it's not empty %>
+    <% if @cart %>
+      <div id="cart" class="carts">
+        <%= render_if @cart && @cart.line_items.any?, @cart %>
+      </div>
+    <% end %>
 
     </section>
+
+   
 
     <%= render "layouts/footer" %>
   </body>

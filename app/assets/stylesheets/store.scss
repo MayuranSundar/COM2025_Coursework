@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .store {
-    max-width: 80em;
+    // max-width: 80em;
+    width: 100%;
     ul.catalog {
         list-style: none;
         padding: 0;
@@ -44,7 +45,8 @@
                 font-weight: 400;
                 letter-spacing: -.01em;
                 border-radius: 12px;
-                line-height: 1.33337;      
+                line-height: 1.33337;
+                display: block;      
             }
             input[type="submit"]:hover {
                 background-color: #0077ed;

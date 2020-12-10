@@ -1,5 +1,5 @@
 <% content_for(:html_title) { 'Contact - Pro Phones' } %>
-<section class="depot_form">
+<section class="default_form">
 <%# Flash Meessage for contact page  %>
   <% flash.each do |key, value| %>
     <%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>

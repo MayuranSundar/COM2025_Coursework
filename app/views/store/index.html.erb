@@ -16,7 +16,7 @@
             <%= sanitize(phone.specifications) %>
           </p>
           <div class="price">
-            <%= number_to_currency(phone.price, :unit =>"£") %>
+            <%= number_to_currency(phone.price, :unit =>"£") %><br><br>
             <%= button_to 'Add to Cart', line_items_path(phone_id: phone), remote: true %>
           </div>
         </li>
