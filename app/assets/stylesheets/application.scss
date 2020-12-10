@@ -43,39 +43,11 @@ header.main {
         flex-direction: row; // desktop is vertically laid out
         -webkit-box-orient: horizontal;
     }
-    nav {
-        padding-bottom: 1em;
-        background: #141;
-        text-align: center; // mobile has centered nav
-        @media (min-width: 30em) {
-            text-align: left; // desktop nav is left-aligned
-            padding: 1em; // and needs more padding
-        }
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            @media (min-width: 30em) {
-                padding-right: 1em; // give desktop some extra space
-            }
-            li {
-                margin: 0;
-                padding: 0.5em;
-                text-transform: uppercase;
-                letter-spacing: 0.354em;
-                a {
-                    color: #bfb;
-                    text-decoration: none;
-                }
-                a:hover {
-                    background: none;
-                    color: white;
-                }
-            }
-        }
-    }
+    
     main {
         padding: 0.5em;
+        margin: 50px 15%;
+        width: 70%;
     }
     // COPIED FROM BOOK
     // CSS FOR ADDED TO CART SIGN
@@ -276,3 +248,53 @@ header.main {
     margin-left: 12.5%;
     
 }
+
+// Navigation Bar
+.top_nav{
+    padding: 0 25%;
+}    
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 44px;
+
+    padding-bottom: 1em;
+    background: #333333;
+    text-align: center; // mobile has centered nav
+    @media (min-width: 30em) {
+        text-align: left; // desktop nav is left-aligned
+        padding: 1em; // and needs more padding
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display:flex;
+        justify-content: space-around;        
+
+        @media (min-width: 30em) {
+            padding-right: 1em; // give desktop some extra space
+        }
+
+        li {
+            margin: 0;
+            padding: 14px 0;
+            text-align: center;
+            a {
+                color: #d6d6d6;
+                text-decoration: none;
+            }            
+            a:visited {
+                color: #d6d6d6;
+            }
+            a:hover {
+                background: none;
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+

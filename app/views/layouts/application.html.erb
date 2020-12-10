@@ -19,37 +19,40 @@
 
   <body>
     <%= render "layouts/header" %>
+    <nav class="top_nav">
+
+        <%# Renders the cart on the side when it's not empty %>
+        <% if @cart %>
+          <div id="cart" class="carts">
+            <%= render_if @cart && @cart.line_items.any?, @cart %>
+          </div>
+        <% end %>
+
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/store">Phones</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/admin">Admin</a></li>
+        </ul>
+        
+        <% if session[:user_id] %>
+            <nav class="signed_in_nav">
+              <ul>
+                <li><%= link_to 'Orders', orders_path %></li>
+                <li><%= link_to 'Phones', phones_path %></li>
+                <li><%= link_to 'Users',  users_path %></li>
+                <li><%= button_to 'Logout', logout_path, method: :delete %></li>
+              </ul>
+            </nav>
+        <% end %> 
+
+    </nav>
     
     <section class="content">
-    <nav class="side_nav">
-    <%# Renders the cart on the side when it's not empty %>
-      <% if @cart %>
-        <div id="cart" class="carts">
-          <%= render_if @cart && @cart.line_items.any?, @cart %>
-        </div>
+      <%# Flash Meessage for contact page  %>
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
       <% end %>
-
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/store">Phones</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/admin">Sign In</a></li>
-      </ul>
-      <% if session[:user_id] %>
-          <nav class="signed_in_nav">
-            <ul>
-              <li><%= link_to 'Orders', orders_path %></li>
-              <li><%= link_to 'Phones', phones_path %></li>
-              <li><%= link_to 'Users',  users_path %></li>
-              <li><%= button_to 'Logout', logout_path, method: :delete %></li>
-            </ul>
-          </nav>
-      <% end %> 
-    </nav>
-        <%# Flash Meessage for contact page  %>
-        <% flash.each do |key, value| %>
-          <%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
-        <% end %>
 
     <main class='<%= controller.controller_name %>'>
       <%= yield %>
