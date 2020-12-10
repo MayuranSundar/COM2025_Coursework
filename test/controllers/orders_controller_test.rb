@@ -31,11 +31,6 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_order_url(@order)
-    assert_response :success
-  end
-
   test "should update order" do
     patch order_url(@order), params: { order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type } }
     assert_redirected_to order_url(@order)
