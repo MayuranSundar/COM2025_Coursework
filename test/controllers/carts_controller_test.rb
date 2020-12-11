@@ -10,11 +10,6 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_cart_url
-    assert_response :success
-  end
-
   test "should create cart" do
     assert_difference('Cart.count') do
       post carts_url, params: { cart: {  } }
@@ -25,11 +20,6 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should show cart" do
     get cart_url(@cart)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_cart_url(@cart)
     assert_response :success
   end
 

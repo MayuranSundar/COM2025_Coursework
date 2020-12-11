@@ -26,11 +26,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to users_url
   end
 
-  test "should show user" do
-    get user_url(@user)
-    assert_response :success
-  end
-
   test "should edit user" do
     get edit_user_url(@user)
     assert_response :success

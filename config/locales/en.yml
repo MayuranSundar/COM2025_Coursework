@@ -38,7 +38,17 @@ en:
       logout: If you wish to log out
 
   carts:
+    index:
+      title: Carts
+      table_head: Cart ID
 
+    cart:
+      title: Shopping Cart
+      total: "Total Amount:"
+
+    form:
+      error: " Prohibited this cart from being saved:"
+    
   contact_mailer:
     contact_email:
       title: Customer Query for Pro Phones
@@ -58,6 +68,11 @@ en:
       footer: " All Right Reserved By Mayuran Sundar"
 
   line_items:
+    index: 
+      title: Line Items
+      phone: Phone
+      cart: Cart
+
     form:
       error: " Prohibited this line_item from being saved:"
 
@@ -84,6 +99,7 @@ en:
       title: Please Enter Your Details
     
     show:
+      title: Order Details
       name: "Customer Name:"
       address: "Customer Address:"
       email: "Customer Email:"
@@ -121,7 +137,6 @@ en:
 
     form:
       
-
   sessions:
     new:
       title: Please Log In

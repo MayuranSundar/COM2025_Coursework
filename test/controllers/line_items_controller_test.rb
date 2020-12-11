@@ -10,11 +10,6 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_line_item_url
-    assert_response :success
-  end
-
   test "should create line_item" do
     assert_difference('LineItem.count') do
       post line_items_url, params: { phone_id: phones(:iphone).id }
@@ -24,16 +19,6 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     
     assert_select 'h2', 'Shopping Cart'
     assert_select 'td', "Apple iPhone 12 Pro"
-  end
-
-  test "should show line_item" do
-    get line_item_url(@line_item)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_line_item_url(@line_item)
-    assert_response :success
   end
 
   test "should update line_item" do

@@ -1,6 +1,12 @@
 .carts {
+  
     table {
       border-collapse: collapse;
+    }
+    .carts_id{
+      color: white;
+      font-weight: bold;
+      text-align: center;
     }
     td {
       padding: 0.5em;
@@ -24,7 +30,8 @@
         text-align: right;
       }
       td.price {
-        border-top: solid thin;
+        color: #0071e3;
+
       }
     }
     input[type="submit"] {
