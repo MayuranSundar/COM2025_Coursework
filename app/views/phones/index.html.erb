@@ -3,7 +3,7 @@
   <aside id= "notice" > <%= notice %> </aside>
 <% end %>
 
-<h1>All Available Phones</h1>
+<h1><%= t('.title') %></h1>
 
 <table>
   <tfoot>
@@ -22,7 +22,7 @@
     </td>
     
     <td class= "specifications" >
-      <h1> <%= phone.brand %> <%= phone.model %> </h1>
+      <h2> <%= phone.brand %> <%= phone.model %> </h2>
       <p> <%= strip_tags(phone.specifications) %> </p>
     </td>
     

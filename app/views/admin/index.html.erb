@@ -1,23 +1,23 @@
 <% content_for(:html_title) { 'Admin - Pro Phones' } %>
 
-<h1>Welcome Back Admin</h1>
-<h3>Total number of orders as of  <%= Time.now.to_formatted_s(:long_ordinal) %> is <%= @total_orders %>.</h3><br>
+<h1><%= t('.title') %></h1>
+<h3><%= t('.total') %> <%= Time.now.to_formatted_s(:long_ordinal) %> is <%= @total_orders %>.</h3><br>
 
 <table class = "admin_table">
     <tr>
-        <th><h3><strong>View all phones in stock<strong></h3></th>
+        <th><h3><strong><%= t('.phones') %><strong></h3></th>
         <th><%= link_to 'Phones', phones_path, {class: "default_btn admin_btn"} %></th>
     </tr>
     <tr>
-        <th><h3><strong>View all recent orders</strong></h3></th>
+        <th><h3><strong><%= t('.orders') %></strong></h3></th>
         <th><%= link_to 'Orders', orders_path, {class: "default_btn admin_btn"} %></th>
     </tr>
     <tr>
-        <th><h3><strong>View all current users<strong></h3></th>
+        <th><h3><strong><%= t('.users') %><strong></h3></th>
         <th><%= link_to 'Users', users_path, {class: "default_btn admin_btn"} %></th>
     </tr>
     <tr>
-        <th><h3><strong>If you wish to log out<strong></h3></th>
+        <th><h3><strong><%= t('.logout') %><strong></h3></th>
         <th><%= button_to 'Logout', login_path, method: :delete, data: { confirm: "Are you sure?" }, class: "default_btn admin_btn" %></th>
     </tr>
 </table>

@@ -4,7 +4,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h1>Our Phone Range</h1>
+<h1><%= t('.title') %></h1>
 <ul class="catalog">
   <% cache @phones do %>
     <% @phones.each do |phone| %>

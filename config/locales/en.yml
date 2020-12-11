@@ -1,34 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   home:
     index:
@@ -57,3 +26,121 @@ en:
     request_contact:
       no_email: We need your email to get back to you.
       email_sent: Thanks for contacting us, you will hear from us soon.
+
+  admin:
+    index:
+      title: Welcome Back Admin
+      total: Total number of orders as of   
+
+      phones: View all phones in stock
+      orders: View all recent orders
+      users: View all current users
+      logout: If you wish to log out
+
+  carts:
+
+  contact_mailer:
+    contact_email:
+      title: Customer Query for Pro Phones
+      name: "Name: "
+      email: "Email: "
+      phone: "Phone: "
+      message: "Message: "
+  
+  layouts:
+    application: 
+      home: Home
+      phones: Phones
+      contact: Contact
+      admin: Admin
+      
+    footer: 
+      footer: " All Right Reserved By Mayuran Sundar"
+
+  line_items:
+    form:
+      error: " Prohibited this line_item from being saved:"
+
+  order_mailer:
+    received:
+      title: ProPhones order confirmation email
+      hello: Hello
+      message: "Thanks for your order. We are preparing the following item(s) for dispatch:"
+      quantity: Quantity
+      phone: Phone
+      dispatched: We will let you know once your item(s) been dispatched.
+      delivery: Your estimated delivery date is
+
+    dispatched:
+      title: ProPhones order has been dispatched
+      hello: Hello
+      message: "We thought you would like to know that your item(s) have been dispatched. Your order is on it's way so it can no longer be changed."
+      quantity: Quantity
+      phone: Phone
+      delivery: Your estimated delivery date is 
+
+  orders:
+    new: 
+      title: Please Enter Your Details
+    
+    show:
+      name: "Customer Name:"
+      address: "Customer Address:"
+      email: "Customer Email:"
+      pay: "Pay type:"
+    
+    index:
+      title: Orders
+      name: Customer Name
+      address: Customer Address
+      email: Customer Email
+      pay: Pay type
+    
+    form:
+      error: " Prohibited this order from being saved:"
+  
+  phones:
+    index:
+      title: All Available Phones
+    
+    edit: 
+      title: Edit Phone
+    
+    new: 
+      title: New Phone
+
+    show:
+      title: Phone Details
+      brand: "Phone Brand:"
+      model: "Phone Model:"
+      size: "Phone Size:"
+      colour: "Phone Colour:"
+      specs: "Phone Specifications:"
+      img: "Image url:"
+      price: "Phone Price:"
+
+    form:
+      
+
+  sessions:
+    new:
+      title: Please Log In
+
+  store:
+    index:
+      title: Our Phone Range
+
+  users:
+    index:
+      title: Users
+      table_head: User Name
+    
+    new:
+      title: New User 
+
+    edit:
+      title: Edit User
+
+    form:
+      error: " Prohibited this user from being saved:"
+      details: Enter User Details

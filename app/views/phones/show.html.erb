@@ -1,37 +1,37 @@
 <% content_for(:html_title) { 'Phone Info - Pro Phones' } %>
-<%# <p id="notice"><%= notice %></p>
+<h1><%= t('.title') %></h1>
 <p>
-  <strong>Phone Brand:</strong>
+  <strong><%= t('.brand') %></strong>
   <%= @phone.brand %>
 </p>
 
 <p>
-  <strong>Phone Model:</strong>
+  <strong><%= t('.model') %></strong>
   <%= @phone.model %>
 </p>
 
 <p>
-  <strong>Phone Size:</strong>
+  <strong><%= t('.size') %></strong>
   <%= @phone.size %>
 </p>
 
 <p>
-  <strong>Phone Colour:</strong>
+  <strong><%= t('.colour') %></strong>
   <%= @phone.colour %>
 </p>
 
 <p>
-  <strong>Phone Specifications:</strong>
+  <strong><%= t('.specs') %></strong>
   <%= @phone.specifications %>
 </p>
 
 <p>
-  <strong>Image url:</strong>
+  <strong><%= t('.img') %></strong>
   <%= @phone.image_url %>
 </p>
 
 <p>
-  <strong>Phone Price:</strong>
+  <strong><%= t('.price') %></strong>
   <%= @phone.price %>
 </p>
 

@@ -4,7 +4,7 @@
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> Prohibited this user from being saved:</h2>
+      <h2><%= pluralize(user.errors.count, "error") %><%= t('.error') %></h2>
 
       <ul>
       <% user.errors.full_messages.each do |message| %>
@@ -14,7 +14,7 @@
     </div>
   <% end %>
 
-  <h2>Enter User Details</h2>
+  <h2><%= t('.details') %></h2>
 
   <div class="field">
     <%= form.label :name, 'Name:' %>

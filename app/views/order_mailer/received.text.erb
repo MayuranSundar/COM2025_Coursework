@@ -1,7 +1,0 @@
-Hello <%= @order.name %>,
-Thanks for your order. 
-We are preparing the following item(s) for dispatch:
-<%= render @order.line_items -%>
-We will let you know once your item(s) been dispatched.
-
-Your estimated delivery date is <%= DateTime.now + 1.week %>
