@@ -13,14 +13,14 @@ class HomeController < ApplicationController
         phone = params[:phone]
         message = params[:message]
       
+        redirect_to contact_path
+
         if email.blank?
-            flash[:alert] = t('home.request_contact.no_email')
+            flash[:alert] = t('.no_email')
         else
             ContactMailer.contact_email(email, name, phone, message).deliver_now
-            flash[:notice] = t('home.request_contact.email_sent')
+            flash[:notice] = t('.email_sent')
         end
-      
-        redirect_to contact_path
     end
   
 end

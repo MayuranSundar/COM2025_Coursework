@@ -47,7 +47,7 @@ en:
       total: "Total Amount:"
 
     form:
-      error: " Prohibited this cart from being saved:"
+      error: " prohibited this cart from being saved:"
     
   contact_mailer:
     contact_email:
@@ -74,7 +74,7 @@ en:
       cart: Cart
 
     form:
-      error: " Prohibited this line_item from being saved:"
+      error: " prohibited this line_item from being saved:"
 
   order_mailer:
     received:
@@ -113,7 +113,7 @@ en:
       pay: Pay type
     
     form:
-      error: " Prohibited this order from being saved:"
+      error: " prohibited this order from being saved:"
   
   phones:
     index:
@@ -157,5 +157,5 @@ en:
       title: Edit User
 
     form:
-      error: " Prohibited this user from being saved:"
+      error: " prohibited this user from being saved:"
       details: Enter User Details

@@ -1,3 +1,6 @@
+<%# Script tag for the jquery validate, it doesn't seem to be working when it is in the application.html.erb %>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
 <% content_for(:html_title) { 'Contact - Pro Phones' } %>
 <section class="default_form">
 <%# Flash Meessage for contact page  %>
@@ -10,18 +13,18 @@
   <p>
     <%= t('.contact_us') %>
   </p>
-  <%= form_tag request_contact_path, method: 'post' do %>
+  <%= form_tag request_contact_path, id: 'ContactForm', method: 'post' do %>
     <%= label_tag :name, t('.name') %>
-    <%= text_field_tag :name, '', title: t('.enter_name'), placeholder: t('.enter_name'), size: 50 %>
+    <%= text_field_tag :name, '', title: t('.enter_name'), name: 'name', placeholder: t('.enter_name'), size: 50 %><br>
 
     <%= label_tag :email, t('.email') %>
-    <%= email_field_tag :email, '', title: t('.enter_email'), placeholder: t('.enter_email') %>
+    <%= email_field_tag :email, '', title: t('.enter_email'), name: 'email', placeholder: t('.enter_email') %><br>
 
     <%= label_tag :phone, t('.phone') %>
-    <%= phone_field_tag :phone, '', title: t('.enter_phone'), placeholder: t('.enter_phone') %>
+    <%= phone_field_tag :phone, '', title: t('.enter_phone'), name: 'phone', placeholder: t('.enter_phone') %><br>
 
     <%= label_tag :message, t('.message') %>
-    <%= text_field_tag :message, '', title: t('.enter_message'), placeholder: t('.enter_message'), size: 100 %>
+    <%= text_field_tag :message, '', title: t('.enter_message'), name: 'message', placeholder: t('.enter_message'), size: 100 %><br>
     
     <%= submit_tag t('.submit') %>
     

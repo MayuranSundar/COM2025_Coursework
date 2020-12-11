@@ -120,7 +120,6 @@ header.main {
         input, textarea, select, option {
             font-size: 12px;
             padding: 0.5em;
-            margin-bottom: 15px;
             display: block;
             width: 50%;
             color: #333333;
@@ -187,28 +186,6 @@ header.main {
             input,textarea {
                 background: pink;
             }
-        }
-    }
-
-    // CSS FOR USER's SIDEBAR NAVIGATION
-    nav.signed_in_nav {
-        border-top: solid thin #bfb;
-        padding: 0.354em 0;
-        margin-top: 0.354em;
-        input[type="submit"] {
-            // Make the logout button look like a
-            // link, so it matches the nav style
-            background: none;
-            border: none;
-            color: #bfb;
-            font-size: 1em;
-            letter-spacing: 0.354em;
-            margin: 0;
-            padding: 0;
-            text-transform: uppercase;
-        }
-        input[type="submit"]:hover {
-            color: white;
         }
     }
 
@@ -290,6 +267,12 @@ header.main {
     h1{
         
         border-bottom: solid 3.5px white; 
+    }
+
+    .error{
+        color: white;
+        border-bottom: solid 1px red;
+        font-weight: lighter;
     }
     
 }
