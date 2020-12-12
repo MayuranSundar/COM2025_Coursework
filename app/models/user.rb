@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  # Validates the name and ensures it is uinque and has a secured password
   validates :name, presence: true, uniqueness: true
   has_secure_password
 
@@ -7,6 +8,7 @@ class User < ApplicationRecord
   class Error < StandardError
   end
 
+  # Private method to stop the last user isn't deleted
   private
     def ensure_an_admin_remains
       if User.count.zero?

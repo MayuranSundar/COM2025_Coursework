@@ -17,13 +17,21 @@
 //= require turbolinks
 //= require_tree .
 
+// Function to validate the contact form
 function  ValidateContact_form()
 {
+    // finds the contact form based on the id and uses the validate method
     $('#ContactForm').validate({
+      // rules for the contact form
+      // Makes all the fields required
       rules: {
-        name: {required: true},
+        name: {
+          required: true,
+          lettersonly: true,
+        },
         message: {required: true},
         phone: {
+          // Digits only in phone field and max and min length to replicate a UK phone
           required: true,
           digits: true,
           maxlength: 11,
@@ -31,11 +39,16 @@ function  ValidateContact_form()
         },
         email: {
           required: true,
+          // To ensure it is a valid email
           email: true,
         }
       },
+      // Messages for each of the rules set
       messages: {
-        name: {required: "You must have a name right?",},
+        name: {
+          required: "You must have a name right?",
+          lettersonly: "Names must only contain letters, unless you are Elon's son",
+        },
         message: {required: "We are sure you don't want to send us an empty message",},
         phone: {
           required: "We need your phone number as well",
@@ -51,20 +64,32 @@ function  ValidateContact_form()
     });
 }
 
+// Function to validate the orders form
 function  ValidateOrders_form()
 {
+    // finds the order form based on the id and uses the validate method
     $('#orders_form').validate({
+      // Rules for the order form
+      // Makes all the fields required
       rules: {
-        name: {required: true},
+        name: {
+          required: true,
+          lettersonly: true,
+        },
         address: {required: true},
         email: {
           required: true,
+          // To ensure it is a valid email
           email: true,
         },
         paytype: {required: true},
       },
+      // Messages for each of the rules set
       messages: {
-        name: {required: "Who are we going to the order to?",},
+        name: {
+          required: "You must have a name right?",
+          lettersonly: "Names must only contain letters, unless you are Elon's son",
+        },
         address: {required: "If you want your phone, we need your address",},
         email: {
           required: "We need your email to keep you updated",
@@ -76,6 +101,7 @@ function  ValidateOrders_form()
     });
 }
 
+// When the documetn is ready the ValidateContactForm and ValidateOrderForm methods are run
 $(document).ready(function() {
 
     if(document.getElementById('ContactForm'))
