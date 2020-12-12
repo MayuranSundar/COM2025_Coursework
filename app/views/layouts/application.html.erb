@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <%= favicon_link_tag asset_path('logo.png') %>
+    <%= favicon_link_tag asset_path('favicon.png') %>
   </head>
 
   <body>
@@ -22,7 +22,8 @@
     <nav class="top_nav">
 
         <ul>
-          <li><a href="/"><%= t('.home') %></a></li>
+          <%# <li ><a href="/" id = "home"><img src="logo2.png"><%= t('.home') %></a></li>
+          <li ><a href="/" id = "home"><%= image_tag("finalLogo.png", width: '16px') %></a></li>
           <li><a href="/store"><%= t('.phones') %></a></li>
           <li><a href="/contact"><%= t('.contact') %></a></li>
           <li><a href="/admin"><%= t('.admin') %></a></li>
@@ -33,7 +34,6 @@
     
 
     <section class="content">
-      
 
     <main class='<%= controller.controller_name %>'>
       <%= yield %>
@@ -46,9 +46,7 @@
       </div>
     <% end %>
 
-    </section>
-
-   
+    </section>   
 
     <%= render "layouts/footer" %>
   </body>
