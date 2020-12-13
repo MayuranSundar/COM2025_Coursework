@@ -7,6 +7,9 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
     assert_select 'nav.top_nav a', minimum: 4
     assert_select 'main ul.catalog li', 3
     assert_select 'h2', 'Apple iPhone 12 Pro'
+    assert_select '.specs', 'iOS 14'
+    assert_select '.size', '128GB'
+    assert_select '.colour', 'Midnight Blue'
     assert_select '.price', /\£[,\d]+\.\d\d/
   end
 end

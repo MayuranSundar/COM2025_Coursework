@@ -31,15 +31,13 @@
 
     </nav>
 
-    
-
     <section class="content">
 
     <main class='<%= controller.controller_name %>'>
       <%= yield %>
     </main>
     
-     <%# Renders the cart on the side when it's not empty %>
+    <%# Renders the cart on the side when it's not empty %>
     <% if @cart %>
       <div id="cart" class="carts">
         <%= render_if @cart && @cart.line_items.any?, @cart %>

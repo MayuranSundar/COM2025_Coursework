@@ -12,8 +12,14 @@
         <li>
           <%= image_tag(phone.image_url) %>
           <h2><%= phone.brand %> <%= phone.model %></h2>
-          <p>
+          <p class="specs">
             <%= sanitize(phone.specifications) %>
+          </p>
+          <p class="size">
+            <%= sanitize(phone.size) %>
+          </p>
+          <p class="colour">
+            <%= sanitize(phone.colour) %>
           </p>
           <div class="price">
             <%= number_to_currency(phone.price, :unit =>"£") %><br><br>
