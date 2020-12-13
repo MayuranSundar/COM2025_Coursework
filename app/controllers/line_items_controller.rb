@@ -11,16 +11,10 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
-  # def show
-  # end
-
   # Action to create an object of a line item
   def new
     @line_item = LineItem.new
   end
-
-  # def edit
-  # end
 
   # Action to create new line item
   def create

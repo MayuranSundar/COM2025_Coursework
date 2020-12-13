@@ -19,9 +19,6 @@ class CartsController < ApplicationController
     @cart = Cart.new
   end
 
-  # def edit
-  # end
-
   # Create action which creates a new cart when the user adds a product to the cart
   def create
     @cart = Cart.new(cart_params)

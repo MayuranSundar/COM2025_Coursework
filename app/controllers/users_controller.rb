@@ -6,9 +6,6 @@ class UsersController < ApplicationController
     @users = User.order(:name)
   end
 
-  # def show
-  # end
-
   # Action to create an object of an user
   def new
     @user = User.new

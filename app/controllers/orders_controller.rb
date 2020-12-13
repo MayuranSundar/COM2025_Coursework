@@ -22,9 +22,6 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
 
-  # def edit
-  # end
-
   # Action to create a new order which adds a line items from cart
   def create
     @order = Order.new(order_params)
