@@ -29,7 +29,7 @@ Phone.create!(
 
 Phone.create!(
     brand: 'Samsung',
-    model: 'Galaxy S20 Ultra 5G',
+    model: 'Galaxy S20 Ultra',
     size: '128GB',
     colour: 'Black',
     specifications: 'Android 10',
@@ -56,7 +56,7 @@ Phone.create!(
     
 Phone.create!(
     brand: 'Samsung',
-    model: 'Galaxy Fold2 5G',
+    model: 'Galaxy Fold2',
     size: '256GB',
     colour: 'Mystic Bronze',
     specifications: 'Android 10',

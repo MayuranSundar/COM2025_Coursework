@@ -34,6 +34,69 @@ header.main {
     }
 }
 
+
+
+// Navigation Bar
+.top_nav{
+    padding: 0 25%;
+}    
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 44px;
+
+    padding-bottom: 1em;
+    background: #333333;
+    text-align: center;
+    @media (min-width: 30em) {
+        text-align: left;
+        padding: 1em; 
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display:flex;
+        justify-content: space-around;        
+
+        @media (min-width: 30em) {
+            padding-right: 1em;
+        }
+
+        li {
+            margin: 0;
+            padding: 14px 0;
+            text-align: center;
+            a {
+                color: #d6d6d6;
+                text-decoration: none;
+            }            
+            a:visited {
+                color: #d6d6d6;
+            }
+            a:hover {
+                background: none;
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    padding: 1rem;
+    color: #d6d6d6;
+    text-align: center;
+    border-top: 0.5px solid #a4a4a4 ;
+    background-color: black;
+    width: 100%;
+    
+}
+
+// Main Contents 
 .content {
     background-color: black;
     color: white;
@@ -43,11 +106,11 @@ header.main {
     padding: 0;
     display: flex;
     display: -webkit-flex;
-    flex-direction: column; // mobile is horizontally laid out
+    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     @media (min-width: 30em) {
-        flex-direction: row; // desktop is vertically laid out
+        flex-direction: row;
         -webkit-box-orient: horizontal;
     }
     
@@ -56,9 +119,11 @@ header.main {
         margin: 0 15%;
         width: 70%;
     }
-    // CSS FOR ADDED TO CART SIGN
+
+    // CSS for notices
     .notice,
-    #notice {
+    #notice,
+    #alert p{
         background: white;
         border-radius: 12px;
         border: solid 2px white;
@@ -69,10 +134,9 @@ header.main {
         color: black;
     }
 
-    // CSS FOR THE SIDE CART
+    // CSS for the side cart
     #cart {
         article {
-            
             h2 {
                 margin-top: 0;
             }
@@ -103,7 +167,7 @@ header.main {
             }
         }
     }
-    // CSS FOR ORDER CONFIRMATION FORM
+    // CSS for all default forms
     .default_form {
         padding: 0 1em;
         h1 {
@@ -118,11 +182,11 @@ header.main {
         }
         
         input, textarea, select, option {
+            width: 50%;
+            color: #333333;
             font-size: 12px;
             padding: 0.5em;
             display: block;
-            width: 50%;
-            color: #333333;
         }
 
         input[type="submit"] {
@@ -143,6 +207,7 @@ header.main {
         input[type="submit"]:hover {
             background-color: #0077ed;
         }
+
         // To make the form increase in size
         @media screen and (max-width: 1100px) {
             input, textarea, select, option {
@@ -150,26 +215,26 @@ header.main {
             }
         }
 
-        // Also, clean up the error styling
+        // CSS for errors
         #error_explanation {
-            background-color: white;
-            border-radius: 1em;
-            border: solid thin red;
+            border: solid thin rgba(255, 0, 0, 0.959);
             margin-bottom: 0.5em;
             padding: 0.5em;
             width: 100%;
+            background-color: white;
+            border-radius: 1em;
             h2 {
                 background: none;
-                color: red;
-                font-size: 1.41em;
-                line-height: 1.41em;
-                padding: 1em;
+                color: rgba(255, 0, 0, 0.904);
+                font-size: 1.5em;
+                line-height: 1.5em;
+                padding: 1.1em;
             }
             ul {
                 margin-top: 0;
                 li {
-                    color: red;
-                    font-size: 1em;
+                    color: rgba(255, 0, 0, 0.897);
+                    font-size: 1.1em;
                 }
             }
         }
@@ -202,7 +267,6 @@ header.main {
             padding-left: 50px;
             text-align: left;
             border-bottom: 1px solid #a4a4a4 ;
-            // background-color: #323232;
             background-color: transparent   ;
             color:#d5d5d5; 
         }
@@ -216,6 +280,7 @@ header.main {
         }
         
     }
+    // CSS for all text butons
     .txt_btn {
         a{
             color: #a5a5a5;
@@ -227,6 +292,7 @@ header.main {
         }
     }
 
+    // CSS for all default buttons
     .default_btn{
         background-color: transparent;
         border: none;
@@ -249,26 +315,34 @@ header.main {
     .default_btn:visited{
         background-color: none;
     }
+
+    // CSS for all Show Edit Destroy buttons
     .sed_btn{
         width: 65px;
         margin-left: 30px;
     }
+
+    // CSS for all admin buttons 
     .admin_btn{
         margin-left: 30px;
         margin-top: 15px;
         width: 65px;
     }
+
+    // CSS for admin table
     .admin_table{
         th{
             color: #d6d6d6;
         }
     }
     
+    // CSS for all headers
     h1{
         
         border-bottom: solid 3.5px white; 
     }
 
+    // CSS for JQuery Errors
     .error{
         color: white;
         border-bottom: solid 1px red;
@@ -276,62 +350,5 @@ header.main {
     }
     
 }
-.footer {
-    padding: 1rem;
-    color: #d6d6d6;
-    text-align: center;
-    border-top: 0.5px solid #a4a4a4 ;
-    background-color: black;
-    width: 100%;
-    
-}
 
-// Navigation Bar
-.top_nav{
-    padding: 0 25%;
-}    
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 44px;
-
-    padding-bottom: 1em;
-    background: #333333;
-    text-align: center; // mobile has centered nav
-    @media (min-width: 30em) {
-        text-align: left; // desktop nav is left-aligned
-        padding: 1em; // and needs more padding
-    }
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display:flex;
-        justify-content: space-around;        
-
-        @media (min-width: 30em) {
-            padding-right: 1em; // give desktop some extra space
-        }
-
-        li {
-            margin: 0;
-            padding: 14px 0;
-            text-align: center;
-            a {
-                color: #d6d6d6;
-                text-decoration: none;
-            }            
-            a:visited {
-                color: #d6d6d6;
-            }
-            a:hover {
-                background: none;
-                color: #ffffff;
-                text-decoration: none;
-            }
-        }
-    }
-}
 

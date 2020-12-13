@@ -1,12 +1,11 @@
 .carts {
-  
     table {
       border-collapse: collapse;
     }
     .carts_id{
-      color: white;
       font-weight: bold;
       text-align: center;
+      color: white;
     }
     td {
       padding: 0.5em;
@@ -15,23 +14,22 @@
     td.quantity {
       white-space: nowrap;
     }
-    td.quantity::after {
-      content: " ×";
-    }
     td.price {
       font-weight: bold;
       text-align: right;
     }
+    td.quantity::after {
+      content: " ×";
+    }
     tfoot {
-      th, td.price {
-        font-weight: bold;
-      }
       th {
         text-align: right;
       }
       td.price {
         color: #0071e3;
-
+      }
+      th, td.price {
+        font-weight: bold;
       }
     }
     input[type="submit"] {

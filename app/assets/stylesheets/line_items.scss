@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@keyframes line-item-highlight {
+@keyframes highlight-line-item {
     0% {
       background: #0071e3;
     }
@@ -11,6 +11,6 @@
     }
   }
   
-  .line-item-highlight {
-    animation: line-item-highlight 2s;
+  .highlight-line-item {
+    animation: highlight-line-item 2s;
   }

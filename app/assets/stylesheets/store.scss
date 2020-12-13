@@ -2,22 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .store {
-    // max-width: 80em;
     width: 100%;
     ul.catalog {
         list-style: none;
         padding: 0;
         margin: 0;
         li {
-            padding: 1em;
-            margin: 0;
             border-bottom: solid thin #ddd;
-            // This makes sure our <li> has enough height
-            // to hold the entire image, since it's floated
+            margin: 0;
+            padding: 1em;
+
             &::after {
+                display: block;
                 clear: both;
                 content: " ";
-                display: block;
+                
             }
             img {
                 float: left;
@@ -25,6 +24,7 @@
                 margin-right: 1em;
                 margin-bottom: 1em;
                 width: 250px;
+                transition: width .5s;
             }
             .price {
                 font-size: 1.414em;
@@ -52,5 +52,81 @@
                 background-color: #0077ed;
             }
         }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .store ul.catalog li img {
+        width: 200px;
+    }
+    .store ul.catalog li h2{
+        font-size: 25px;
+    }
+    .store ul.catalog li p{
+        font-size: 11px;
+    }
+    .store ul.catalog li .price{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .store ul.catalog li h2{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .store ul.catalog li img {
+        width: 180px;
+    }
+    .store ul.catalog li h2{
+        font-size: 22px;
+    }
+    .store ul.catalog li p{
+        font-size: 11px;
+    }
+    .store ul.catalog li .price{
+        font-size: 14px;
+    }
+    .store ul.catalog li input[type="submit"] {
+        float:right;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .store ul.catalog li img {
+        width: 300px;
+    }
+    .store ul.catalog li h2{
+        font-size: 35px;
+    }
+    .store ul.catalog li p{
+        font-size: 18px;
+    }
+    .store ul.catalog li .price{
+        font-size: 22px;
+    }
+    .store ul.catalog li input[type="submit"] {
+        float:left;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .store ul.catalog li img {
+        width: 250px;
+        padding-left: 0;
+    }
+    .store ul.catalog li h2{
+        font-size: 30px;
+    }
+    .store ul.catalog li p{
+        font-size: 16px;
+    }
+    .store ul.catalog li .price{
+        font-size: 20px;
+    }
+    .store ul.catalog li{
+        padding: 0;
     }
 }

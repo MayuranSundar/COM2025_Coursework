@@ -7,8 +7,8 @@
     padding: 0.5em;
 
     a {
-        padding: 0.354em 0.5em;
-        border-radius: 0.354em;
+        padding: 0.35em 0.5em;
+        border-radius: 0.35em;
     }
 
     table {
@@ -20,31 +20,17 @@
         margin: 0;
     }
 
-    tr.list_line_odd {
-        background-color: #effeef;
-    }
-
     td.image {
-        // Hide this on mobile devices
         display: none;
 
-        // Assume anything bigger than 30em
-        // is a non-mobile device and can
-        // fit the image.
         @media (min-width: 30em) {
             display: block;
 
             img {
-                height: 11.3em;
+                height: 12em;
             }
         }
-    }
-
-    td.specification {
-        h1 {
-            font-size: 1.4em;
-        }
-    }
+    } 
 
     td.actions {
         ul {
@@ -54,6 +40,12 @@
             li {
                 padding: 0.5em 0.5em;
             }
+        }
+    }
+
+    td.specification {
+        h1 {
+            font-size: 1.4em;
         }
     }
 

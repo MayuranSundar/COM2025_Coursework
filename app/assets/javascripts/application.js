@@ -114,6 +114,5 @@ $(document).ready(function() {
       ValidateOrders_form();
     }
 
-
 });
   
