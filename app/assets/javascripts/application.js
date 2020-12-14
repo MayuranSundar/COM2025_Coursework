@@ -68,36 +68,31 @@ function  ValidateContact_form()
 function  ValidateOrders_form()
 {
     // finds the order form based on the id and uses the validate method
-    $('#orders_form').validate({
+    $('#order_form').validate({
       // Rules for the order form
       // Makes all the fields required
       rules: {
-        name: {
-          required: true,
-          lettersonly: true,
-        },
-        address: {required: true},
-        email: {
+        'order[name]': {required: true},
+        'order[address]': {required: true},
+        'order[email]': {
           required: true,
           // To ensure it is a valid email
           email: true,
         },
-        paytype: {required: true},
+        'order[pay_type]': {required: true},
       },
       // Messages for each of the rules set
       messages: {
-        name: {
-          required: "You must have a name right?",
-          lettersonly: "Names must only contain letters, unless you are Elon's son",
-        },
-        address: {required: "If you want your phone, we need your address",},
-        email: {
+        'order[name]': {required: "You must have a name right?",},
+        'order[address]': {required: "If you want your phone, we need your address",},
+        'order[email]': {
           required: "We need your email to keep you updated",
           email: "That doesn't look like a valid email",
         },
-        paytype: {required: "Select how you would like to pay us",},
+        'order[pay_type]': {required: "Select how you would like to pay us",},
         
-      }
+      },
+        validClass: "valid_class"
     });
 }
 
@@ -109,7 +104,8 @@ $(document).ready(function() {
       ValidateContact_form();
     }
 
-    if(document.getElementById('orders_form'))
+    // Could not use jQuery validate on form_with but an attempt was made
+    if(document.getElementById('order_form'))
     {
       ValidateOrders_form();
     }

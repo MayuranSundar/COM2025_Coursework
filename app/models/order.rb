@@ -11,7 +11,7 @@ class Order < ApplicationRecord
         "Gift Card" => 2
     }
 
-    # validates :name, :address, :email, presence: true
+    validates :name, :address, :email, presence: true
     validates :pay_type, inclusion: pay_types.keys
 
     # Method to add line item to cart
