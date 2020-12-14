@@ -149,7 +149,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.2.5)
+    redis (3.3.5)
     regexp_parser (1.8.2)
     rubyzip (2.3.0)
     sass (3.7.4)
@@ -216,7 +216,7 @@ DEPENDENCIES
   rails (~> 5.2.4, >= 5.2.4.4)
   rails-controller-testing
   rails_12factor
-  redis (~> 4.0)
+  redis (~> 3.0)
   sass-rails (~> 5.0)
   selenium-webdriver
   sqlite3
