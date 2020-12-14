@@ -11,4 +11,9 @@ class OrderMailer < ApplicationMailer
     @order = order
     mail to: order.email, subject: 'Your Pro Phones Order Has Been Dispatched'
   end
+
+  def delivered(order)
+    @order = order
+    mail to: order.email, subject: 'Your Pro Phones Order Has Been Delivered'
+  end
 end

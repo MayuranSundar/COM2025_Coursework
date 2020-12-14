@@ -33,8 +33,18 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         # Session is set to nil for the next order
         session[:cart_id] = nil
-        # tells the OrderMailer to deliver the order confirmation email 
+
+        # Tells the OrderMailer to deliver the order confirmation email 
         OrderMailer.received(@order).deliver_now
+        # Tells the OrderMailer to deliver the dispatched email later
+        # This can be changed to hours or days but for the purpose of this app it will be 5 mins
+        OrderMailer.dispatched(@order).deliver_later(wait: 5.minutes)
+        # Tells the OrderMailer to deliver the delivered email later
+        # This can be changed to 1 week from order date using (wait: 1.weeks.from_now) to match the order and dispatched email
+        # but for the purpose of this app it will be 10 mins
+        OrderMailer.delivered(@order).deliver_later(wait: 10.minutes)
+
+
         # Notice is shown to let the user know the order is placed
         format.html { redirect_to store_index_url, notice: 'Your order has been placed.' }
         format.json { render :show, status: :created, location: @order }

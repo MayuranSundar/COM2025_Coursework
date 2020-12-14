@@ -4,8 +4,11 @@
   <blockquote><br><%= t('.message') %> </blockquote>
 </p>
 
-<table>
-  <tr><th colspan="2"><%= t('.quantity') %></th><th><%= t('.phone') %></th></tr>
+<table class = "order_table">
+  <tr>
+    <th colspan="2"><%= t('.quantity') %></th>
+    <th><%= t('.phone') %></th>
+  </tr>
 <%= render @order.line_items -%>
 
 <p>

@@ -9,10 +9,7 @@
     <th colspan="2"><%= t('.quantity') %></th>
     <th><%= t('.phone') %></th>
   </tr>
+  
 <%= render @order.line_items -%>
-
-<p>
-  <blockquote><br><%= t('.delivery') %> <%= Date.today + 1.week %>.</blockquote> 
-</p>
 
 </table>

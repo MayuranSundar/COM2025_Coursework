@@ -349,6 +349,26 @@ nav {
         font-weight: lighter;
     }
     
+    .order_table{
+        width: 100%;
+
+        table, th, td {
+            border: 1px solid #0071e3;
+        }
+        
+        th, td{
+            color: black;
+            text-align: center;
+        }
+        th{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        td{
+            font-size: 15px;
+        }
+    }
 }
 
 

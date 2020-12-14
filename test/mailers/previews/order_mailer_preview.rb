@@ -11,4 +11,9 @@ class OrderMailerPreview < ActionMailer::Preview
     OrderMailer.dispatched
   end
 
+  # Preview this email at http://localhost:3000/rails/mailers/order_mailer/delivered
+  def delivered
+    OrderMailer.delivered
+  end
+
 end

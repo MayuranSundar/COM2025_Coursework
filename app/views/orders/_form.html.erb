@@ -1,5 +1,6 @@
 <div class="default_form">
-  <%= form_with(model: order, local: true) do |form| %>
+
+  <%= form_with(model: order, local: true, :id => 'order_form')  do |form| %>
     <% if order.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(order.errors.count, "error") %><%= t('.error') %></h2>
