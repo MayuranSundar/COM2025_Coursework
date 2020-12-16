@@ -61,12 +61,12 @@ gem 'jquery-validation-rails'
 
 # Use sqlite3 as the database for Active Record 
 group :development do
-  gem 'redis', '~> 3.0'
   gem 'sqlite3'
 end
 
 # Gems for heroku
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
+  gem 'rails_12factor'  
+  gem 'redis', '~> 3.0'
 end

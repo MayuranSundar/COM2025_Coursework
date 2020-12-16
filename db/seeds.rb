@@ -1,3 +1,5 @@
+LineItem.delete_all
+Order.delete_all
 Phone.delete_all
 
 Phone.create!(
