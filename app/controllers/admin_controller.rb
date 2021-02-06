@@ -1,3 +1,4 @@
+# Test
 class AdminController < ApplicationController
   # Takes the admin to the admin homepage
   def index
