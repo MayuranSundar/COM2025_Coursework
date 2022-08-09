@@ -1,6 +1,6 @@
 # ProPhones
 ***
-This is my coursework for Web And Database Systems. 
+This is my coursework for Web Applications Development. 
 It is an e-commerce website web application that was built using Ruby on Rails.
 ***
 ## Setup
